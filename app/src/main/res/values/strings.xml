@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">App de gastos</string>
+    <string name="bem_vindo">Bem vindo!</string>
+    <string name="nome">Nome</string>
+    <string name="sobrenome">Sobrenome</string>
+    <string name="msg_one">Estamos quase lá, só</string>
+    <string name="msg_two">precisamos de algumas</string>
+    <string name="msg_three">informações.</string>
+    <string name="saldo_inicial">Saldo inicial</string>
+    <string name="btn_continuar">Continuar</string>
+    <string name="ola">Olá,</string>
+    <string name="tv_nome">Claudir</string>
+    <string name="seu_saldo">Seu saldo:</string>
+    <string name="real">R$</string>
+    <string name="ultimo_lancamento">Último lançamento</string>
+    <string name="shopping">Shopping</string>
+    <string name="data">14/09/10</string>
+    <string name="no_valor_de">no valor de:</string>
+    <string name="nova_despesa">Nova Despesa</string>
+    <string name="gastos">Gastos</string>
+    <string name="adicionar_saldo">Adicionar saldo</string>
+    <string name="outro">Outro</string>
+    <string name="r_246_25">R$246,25</string>
+    <string name="r_3432_00">R$3.432,00</string>
+    <string name="todo">TODO</string>
+</resources>

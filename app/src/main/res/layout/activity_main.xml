@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/container_green_main"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:layout_height="164dp">
+
+        <RelativeLayout
+            android:id="@+id/info_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp">
+
+            <TextView
+                android:id="@+id/a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="18dp"
+                android:layout_marginRight="6dp"
+                android:text="@string/ola"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="28sp"
+                android:layout_marginEnd="6dp" />
+
+            <TextView
+                android:id="@+id/tvNome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="18dp"
+                android:layout_toRightOf="@id/a"
+                android:text="@string/tv_nome"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:textSize="28sp"
+                android:layout_toEndOf="@id/a" />
+
+            <TextView
+                android:id="@+id/c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seu_saldo"
+                android:layout_marginTop="-9dp"
+                android:textSize="20sp"
+                android:textColor="#fff"
+                android:layout_below="@id/tvNome"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rLayoutSaldo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:layout_below="@id/info_top">
+
+            <TextView
+                android:id="@+id/tvSaldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/r_3432_00"
+                android:layout_marginTop="-6dp"
+                android:textSize="32sp"
+                android:textColor="#fff"/>
+
+            <ImageButton
+                android:id="@+id/imgBtnEsconder"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@android:color/transparent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/eye_close"
+                android:contentDescription="@string/todo" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="155dp"
+        android:layout_marginTop="-18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="6dp"
+        android:background="@drawable/custom_cardview"
+        android:layout_below="@id/container_green_main">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/rLayoutCard"
+                android:layout_width="match_parent"
+                android:layout_height="41dp">
+
+                <RelativeLayout
+                    android:layout_width="6dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorYellow"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccentGrey"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:text="@string/ultimo_lancamento"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutUltimoLancamento"
+                android:layout_width="match_parent"
+                android:background="#F1F1F1"
+                android:layout_height="67dp"
+                android:layout_below="@id/rLayoutCard">
+
+                <TextView
+                    android:id="@+id/tvDespesa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorAccent"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="18dp"
+                    android:text="@string/shopping"
+                    android:layout_marginStart="18dp" />
+
+                <TextView
+                    android:id="@+id/tvDataDespesa"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorAccentGrey"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="18dp"
+                    android:text="@string/data"
+                    android:layout_below="@id/tvDespesa"
+                    android:layout_marginStart="18dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rLayoutUltimoLancamento">
+
+                <TextView
+                    android:id="@+id/tvNoValorDe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="18dp"
+                    android:text="@string/no_valor_de"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorAccentGrey"
+                    android:layout_marginStart="18dp" />
+
+                <TextView
+                    android:id="@+id/tvValorDespesa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="18dp"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorAccentGrey"
+                    android:text="@string/r_246_25"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CFCFCF"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="115dp"
+        />
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:id="@+id/line"
+            android:layout_width="wrap_content"
+            android:layout_height="115dp">
+
+            <RelativeLayout
+                android:id="@+id/rLayoutDespesa"
+                android:layout_width="97dp"
+                android:layout_height="97dp"
+                android:layout_margin="18dp"
+                android:background="@drawable/custom_states">
+
+                <ImageView
+                    android:id="@+id/despesa"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_margin="7dp"
+                    android:src="@drawable/despesa"
+                    android:contentDescription="@string/nova_despesa" />
+
+                <TextView
+                    android:layout_width="73dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginBottom="9dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/nova_despesa"
+                    android:layout_marginStart="7dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutGastos"
+                android:layout_width="97dp"
+                android:layout_height="97dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/custom_button_relativelayout_normal"
+                android:layout_toRightOf="@id/rLayoutDespesa"
+                android:layout_marginEnd="18dp"
+                android:layout_marginStart="0dp"
+                android:layout_toEndOf="@id/rLayoutDespesa">
+
+                <ImageView
+                    android:id="@+id/gastos"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:src="@drawable/gastos"
+                    android:layout_marginStart="7dp"
+                    android:contentDescription="@string/gastos" />
+
+                <TextView
+                    android:layout_width="73dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginBottom="9dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/gastos"
+                    android:layout_marginStart="7dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutAdicionarSaldo"
+                android:layout_width="97dp"
+                android:layout_height="97dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="18dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="18dp"
+                android:background="@drawable/custom_button_relativelayout_normal"
+                android:layout_toRightOf="@id/rLayoutGastos"
+                android:layout_marginEnd="18dp"
+                android:layout_marginStart="0dp"
+                android:layout_toEndOf="@id/rLayoutGastos">
+
+                <ImageView
+                    android:id="@+id/saldo"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:src="@drawable/mais_saldo"
+                    android:layout_marginStart="7dp"
+                    android:contentDescription="@string/adicionar_saldo" />
+
+                <TextView
+                    android:layout_width="73dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginBottom="9dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/adicionar_saldo"
+                    android:layout_marginStart="7dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rLayoutOutro"
+                android:layout_width="97dp"
+                android:layout_height="97dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginBottom="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/custom_button_relativelayout_normal"
+                android:layout_toRightOf="@id/rLayoutAdicionarSaldo"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="18dp"
+                android:layout_toEndOf="@id/rLayoutAdicionarSaldo">
+
+                <ImageView
+                    android:id="@+id/outro"
+                    android:layout_width="21dp"
+                    android:layout_height="21dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginLeft="7dp"
+                    android:src="@drawable/mais_saldo"
+                    android:layout_marginStart="7dp"
+                    android:contentDescription="@string/outro" />
+
+                <TextView
+                    android:layout_width="73dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginBottom="9dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="@string/outro"
+                    android:layout_marginStart="7dp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

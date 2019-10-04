@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/container_green"
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="164dp">
+
+            <RelativeLayout
+                android:id="@+id/part_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="18dp">
+
+                <TextView
+                    android:id="@+id/a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-5dp"
+                    android:layout_marginBottom="18dp"
+                    android:text="@string/bem_vindo"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:textSize="28sp"
+                    tools:targetApi="jelly_bean" />
+
+                <TextView
+                    android:id="@+id/b"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/msg_one"
+                    android:layout_marginTop="-9dp"
+                    android:textSize="24sp"
+                    android:textColor="#fff"
+                    android:layout_below="@id/a"/>
+
+                <TextView
+                    android:id="@+id/c"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/msg_two"
+                    android:layout_marginTop="-4dp"
+                    android:textSize="24sp"
+                    android:textColor="#fff"
+                    android:layout_below="@id/b"/>
+
+                <TextView
+                    android:id="@+id/d"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/msg_three"
+                    android:layout_marginTop="-4dp"
+                    android:textSize="24sp"
+                    android:textColor="#fff"
+                    android:layout_below="@id/c" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/mRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:background="@drawable/custom_msg"
+            android:layout_below="@id/container_green"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:layout_marginTop="6dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="#ffeeee"
+                android:text="Todos campos devem estar preenchidos." />
+
+            <ImageButton
+                android:id="@+id/imgClose"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:background="@android:color/transparent"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_close"
+                android:onClick="fecharMensagem"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/container_green"
+            android:layout_margin="18dp">
+
+            <TextView
+                android:id="@+id/e"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textColor="@color/colorGrey"
+                android:text="@string/nome"/>
+
+            <EditText
+                android:id="@+id/edtNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:textColor="@color/colorAccentGrey"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/e"
+                android:background="@drawable/custom_edit_text"/>
+
+            <TextView
+                android:id="@+id/f"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorGrey"
+                android:text="@string/sobrenome"
+                android:layout_below="@id/edtNome" />
+
+            <EditText
+                android:id="@+id/edtSobrenome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccentGrey"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/f"
+                android:inputType="text"
+                android:background="@drawable/custom_edit_text"/>
+
+            <TextView
+                android:id="@+id/g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:textSize="20sp"
+                android:textColor="@color/colorGrey"
+                android:text="@string/saldo_inicial"
+                android:layout_below="@id/edtSobrenome"/>
+
+            <faranjit.currency.edittext.CurrencyEditText
+                android:id="@+id/edtSaldoInicial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="R$0,00"
+                app:locale="pt_BR"
+                app:showSymbol="true"
+                android:textColor="@color/colorAccentGrey"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/g"
+                android:background="@drawable/custom_edit_text"/>
+
+            <Button
+                android:id="@+id/btnContinuar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:text="@string/btn_continuar"
+                android:textColor="#fff"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:background="@drawable/custom_button"
+                android:layout_below="@id/edtSaldoInicial"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
